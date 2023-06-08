@@ -20,6 +20,8 @@ output:
 
 # d)
 
+**My GitHub-Link: https://github.com/ConstantinSchuh/exeRcise-sheet-3**
+
 **Strengths of Git:**
 
 1.  Distributed Version Control: Git's distributed nature allows for multiple copies of a repository to exist, which means developers can work offline and have their own local copy of the entire project history. This decentralization provides flexibility and resilience, as each developer has a complete backup of the codebase and can easily switch between branches.
