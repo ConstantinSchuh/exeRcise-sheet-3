@@ -60,4 +60,14 @@ total_babies_2022
 ```
 
  * In 2021 was the bigger baby boom with 11524 babies. In 2022 only 9899 babies were born.
+ 
+# d)
+
+```{r}
+vornamen_2021$year <- 2021
+vornamen_2022$year <- 2022
+```
+
+
+
 
