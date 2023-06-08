@@ -68,6 +68,12 @@ vornamen_2021$year <- 2021
 vornamen_2022$year <- 2022
 ```
 
+# e)
+
+```{r}
+library(dplyr)
+vornamen_2021_2022 <- dplyr::bind_rows(vornamen_2021, vornamen_2022)
+```
 
 
 
