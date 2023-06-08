@@ -39,5 +39,14 @@ output:
 ```{r}
 vornamen_2021 <- read.csv("C:/Users/Const/Desktop/Bachelor Geographie/6. Semester/Fortgeschrittene Statistische Software/data/open_data_portal_2022.csv")
 vornamen_2022 <- read.csv("C:/Users/Const/Desktop/Bachelor Geographie/6. Semester/Fortgeschrittene Statistische Software/data/open_data_portal_2022.csv")
+typeof(vornamen_2021$Anzahl)
+vornamen_2021[is.na(vornamen_2021)] <- 0
+vornamen_2022[is.na(vornamen_2022)] <- 0
+vornamen_2021$Anzahl <- as.numeric(vornamen_2021$Anzahl)
+vornamen_2022$Anzahl <- as.numeric(vornamen_2022$Anzahl)
+typeof(vornamen_2021$Anzahl)
+typeof(vornamen_2022$Anzahl)
 ```
+
+ * The Problem was that in "Anzahl" every Number under 5 was displayed as "4 oder weniger" which has characters. When you convert to numerical all rows with "4 oder weniger" turn into NA -> Missing values.
 
