@@ -31,3 +31,13 @@ output:
 1.  Steep Learning Curve: Git has a reputation for having a steep learning curve, especially for beginners. Its command-line interface and numerous features can be overwhelming initially. Concepts like branching, merging, rebasing, and resolving conflicts require understanding to use Git effectively. However, there are user-friendly graphical interfaces and tutorials available to ease the learning process.
 
 2.  Complex Conflict Resolution: When multiple developers make conflicting changes to the same file or code segment, Git requires manual intervention to resolve the conflicts. Although Git provides tools to assist in resolving conflicts, it can still be a challenging and time-consuming process, particularly for larger projects with numerous contributors. Skill and careful attention are necessary to ensure conflicts are resolved correctly without introducing errors.
+
+## Exercise 3
+
+# a)
+
+```{r}
+vornamen_2021 <- read.csv("C:/Users/Const/Desktop/Bachelor Geographie/6. Semester/Fortgeschrittene Statistische Software/data/open_data_portal_2022.csv")
+vornamen_2022 <- read.csv("C:/Users/Const/Desktop/Bachelor Geographie/6. Semester/Fortgeschrittene Statistische Software/data/open_data_portal_2022.csv")
+```
+
