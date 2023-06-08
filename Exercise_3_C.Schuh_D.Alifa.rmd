@@ -89,6 +89,74 @@ top_10_names <- head(name_counts, 10)
 knitr::kable(top_10_names, caption = "Top 10 Most Popular Names")
 ```
 
+## Execise 4
 
+# a) 
+
+**Prompt 1:** The code below does not work because the wrong apply function has been used. Find out which apply function would be correct and why it did not work. Correct the code. Also calculate the rowwise
+means.
+
+**Prompt 2:** as ChatGPT did not answer all questions asked in prompt 1: Why does the lapply() function not work?
+
+The line column_means <- lapply(tax_data[, -1], 2, mean) is attempting to calculate column-wise means using the lapply function. However, the second argument (2) is incorrect. The lapply function does not have an argument for specifying the margin along which the function should be applied, unlike the apply function.
+
+The correct function to calculate column-wise means is `colMeans`.
+
+Here's the corrected code:
+
+```{r}
+tax_data <- data.frame(
+  Name = c("Munich GmbH", "ABC Inc.", "Backpacks 1980", "Bavarian Circus"),
+  Tax_2019 = c(5000, 4000, 6000, 3500),
+  Tax_2020 = c(4800, 4200, 5800, 3700),
+  Tax_2021 = c(5200, 3800, 5900, 3400))
+
+column_means <- colMeans(tax_data[, -1])
+column_means
+```
+
+The `colMeans` function calculates the means of the columns, excluding the first column (`Name`) by using the `[, -1]` syntax. This will give you the desired column-wise means.
+
+If you want to calculate the row-wise means instead, you can use the `rowMeans` function:
+
+```{r}
+row_means <- rowMeans(tax_data[, -1])
+row_means
+```
+
+The `rowMeans` function calculates the means of the rows, excluding the first column (`Name`). This will give you the row-wise means.
+
+# b)
+
+**Prompt:** What does the rapply() function do and give me an example 
+
+The rapply() function in R is used to apply a specified function to each variable in either a list or a nested list. 
+
+Here is an example:
+
+```{r}
+my_list <- list(
+  a = 1,
+  b = list(
+    c = 2,
+    d = list(
+      e = 3,
+      f = c(4, 5)
+    )
+  ),
+  g = "Hello",
+  h = c("World", "!")
+)
+
+check_numeric <- function(x) {
+  is.numeric(x)
+}
+
+result <- rapply(my_list, check_numeric, how = "unlist")
+
+print(result)
+```
+
+ * In this example, the rapply() function applies 'check_numeric()' to every variable in the nested list. The output shows that the numeric variables are a, c, e, f1 and f2
 
 
