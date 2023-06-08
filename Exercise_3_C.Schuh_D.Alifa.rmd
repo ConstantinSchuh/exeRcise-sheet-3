@@ -75,5 +75,18 @@ library(dplyr)
 vornamen_2021_2022 <- dplyr::bind_rows(vornamen_2021, vornamen_2022)
 ```
 
+# f)
+
+```{r}
+name_counts <- vornamen_2021_2022 %>%
+  group_by(Vorname) %>%
+  summarize(Total_Count = sum(Anzahl)) %>%
+  arrange(desc(Total_Count))
+
+top_10_names <- head(name_counts, 10)
+knitr::kable(top_10_names, caption = "Top 10 Most Popular Names")
+```
+
+
 
 
