@@ -1,30 +1,33 @@
 ---
-title: "Exercise_3_C.Schuh_D.Alifa"
-author: "Constantin Schuh (12245505)"
+title: "Exercise 3"
+author: "Dara Alifa (12246777), Constantin Schuh (12245505)"
 date: "`r Sys.Date()`"
-output: html_document
+subtitle: "Fortgeschrittene Statistische Software für NF - SS 2023"
+output:
+ distill::distill_article: default
+ bookdown::html_document2:
+    number_sections: no
+    df_print: paged
+ html_document:
+    number_sections: no
+    df_print: paged
+ pdf_document:
+    number_sections: no
+    df_print: paged
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Exercise 1
 
-## R Markdown
+# d)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+**Strengths of Git:**
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+1.  Distributed Version Control: Git's distributed nature allows for multiple copies of a repository to exist, which means developers can work offline and have their own local copy of the entire project history. This decentralization provides flexibility and resilience, as each developer has a complete backup of the codebase and can easily switch between branches.
 
-```{r cars}
-summary(cars)
-```
+2.  Powerful Branching and Merging: Git excels at branching and merging workflows, enabling developers to create and switch between branches to work on different features or bug fixes independently. The branching model in Git is lightweight and efficient, allowing for rapid iteration and experimentation. Merging branches is also straightforward, enabling smooth collaboration and integration of changes.
 
-## Including Plots
+**Weaknesses of Git:**
 
-You can also embed plots, for example:
+1.  Steep Learning Curve: Git has a reputation for having a steep learning curve, especially for beginners. Its command-line interface and numerous features can be overwhelming initially. Concepts like branching, merging, rebasing, and resolving conflicts require understanding to use Git effectively. However, there are user-friendly graphical interfaces and tutorials available to ease the learning process.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+2.  Complex Conflict Resolution: When multiple developers make conflicting changes to the same file or code segment, Git requires manual intervention to resolve the conflicts. Although Git provides tools to assist in resolving conflicts, it can still be a challenging and time-consuming process, particularly for larger projects with numerous contributors. Skill and careful attention are necessary to ensure conflicts are resolved correctly without introducing errors.
